@@ -18,3 +18,23 @@ const user = {
 };
 
 user.showInfo();
+
+const john = {
+  name: 'John',
+  age: 40
+};
+
+const johnWithHobbies = Object.assign(john, {hobbies:['tennis'], age: 22});
+console.log(johnWithHobbies);
+
+const janeWithHobbies = {...johnWithHobbies, name: 'Jane'};
+console.log(janeWithHobbies);
+
+Object.keys(johnWithHobbies).forEach(item => {
+  console.log(item);
+});
+
+for (const item in johnWithHobbies) {
+  console.log(item);
+}
+
